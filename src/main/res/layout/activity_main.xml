@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_nombre_cliente"
+                android:text="Nombre Cliente"
+                android:textSize="20dp"
+                android:textColor="#f7efef"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/nombre"
+                android:inputType="text"
+                android:textColor="@color/colorText"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_telefono"
+                android:text="Telefono:"
+                android:textSize="20dp"
+                android:textColor="#f7efef"
+                android:inputType="number"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/telefono"
+                android:inputType="number"
+                android:textColor="@color/colorText"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_cantidad_integrantes"
+                android:text="Correo Electronico:"
+                android:textSize="20dp"
+                android:textColor="#f7efef"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/correo"
+                android:inputType="text"
+                android:textColor="@color/colorText"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_agregar"
+                    android:text="Guardar"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txv_idCliente"
+                    android:text="Buscar por id (Eliminar y actualziar)"
+                    android:textSize="17dp"
+                    android:textColor="#f7efef"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/etv_idCliente"
+                    android:inputType="number"
+                    android:textColor="@color/colorText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:id="@+id/button_viewAll"
+                    android:layout_above="@+id/button_update"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:id="@+id/button_update"
+                    android:layout_below="@+id/button_add"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:id="@+id/button_delete"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@+id/button_viewAll"
+                    android:layout_alignLeft="@+id/button_viewAll"
+                    android:layout_alignStart="@+id/button_viewAll" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
